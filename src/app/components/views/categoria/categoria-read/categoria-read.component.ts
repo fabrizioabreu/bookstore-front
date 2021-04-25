@@ -1,5 +1,6 @@
 import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Categoria } from '../categoria.model';
 import { CategoriaService } from '../categoria.service';
 
@@ -14,7 +15,7 @@ export class CategoriaReadComponent implements OnInit {
 
   displayedColumns: string[] = ['id', 'nome', 'descricao', 'livros', 'acoes'];
 
-  constructor(private service: CategoriaService) { }
+  constructor(private service: CategoriaService, private router: Router) { }
 
   // ngOnInit = Tudo que estiver dentro dele, vai rodar sempre que a página iniciar.
   ngOnInit(): void {
@@ -29,4 +30,7 @@ export class CategoriaReadComponent implements OnInit {
     })
   }
 
+  navegarParaCategoriaCreate() {
+    this.router.navigate(["categorias/create"])
+  }
 }
