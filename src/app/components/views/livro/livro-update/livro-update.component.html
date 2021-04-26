@@ -23,9 +23,8 @@
     </mat-form-field>
 
     <div class="buttons">
-        <button  [disabled]="getMessage() || getMessageNomeAutor() || getMessageText()" class="mat-elevation-z8" mat-stroked-button color="primary">ATUALIZAR</button>
+        <button (click)="update()" [disabled]="getMessage() || getMessageNomeAutor() || getMessageText()" class="mat-elevation-z8" mat-stroked-button color="primary">ATUALIZAR</button>
         <button (click)="cancel()" class="mat-elevation-z8" mat-stroked-button color="warn">CANCELAR</button>
-
     </div>
 
 </form>
