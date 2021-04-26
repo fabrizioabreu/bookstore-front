@@ -22,8 +22,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CategoriaReadComponent } from './components/views/categoria/categoria-read/categoria-read.component';
 import { CategoriaCreateComponent } from './components/views/categoria/categoria-create/categoria-create.component';
-// Inportando Formúlário Angular
-import { FormsModule } from '@angular/forms';
+// Inportando Formúlário Angular  - ReactiveFormsModule: Validação dos campos
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CategoriaDeleteComponent } from './components/views/categoria/categoria-delete/categoria-delete.component';
 import { CategoriaUpdateComponent } from './components/views/categoria/categoria-update/categoria-update.component';
 import { LivroReadAllComponent } from './components/views/livro/livro-read-all/livro-read-all.component';
@@ -61,7 +61,8 @@ import { LivroCreateComponent } from './components/views/livro/livro-create/livr
     FormsModule,
     MatInputModule,
     MatFormFieldModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
